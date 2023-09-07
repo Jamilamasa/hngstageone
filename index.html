@@ -17,25 +17,58 @@
         <div class="displayArea">
             <!-- Display picture -->
             <div>
-                <img src="https://ca.slack-edge.com/T05FFAA91JP-U05QXD10A0P-2f48f6d36665-512" alt="Jamil Amasa"
-                    data-testid="slackDisplayImage">
+                <img class="w-10" src="https://ca.slack-edge.com/T05FFAA91JP-U05QXD10A0P-2f48f6d36665-512"
+                    alt="Jamil Amasa" data-testid="slackDisplayImage">
             </div>
-            <!-- Slack Name -->
-            <div>
-                <h2 class="l-heading" data-testid="slackUserName">Jamil Amasa</h2>
-            </div>
-            <!-- Current Day of the week -->
-            <div id="dayOfTheWeek"></div>
-            <!-- Current UTC Time -->
-            <div id="currentUTCTime" data-testid="currentUTCTime"></div>
-            <!-- Track -->
-            <div>
-                <p class="l-text" data-testid="myTrack">Frontend</p>
-            </div>
-            <!-- GitHub URL -->
-            <div></div>
+            <ul class="list">
+                <li>
+                    <!-- Slack Name -->
+                    <div class="listItem">
+                        <h3>Slack Name: </h3>
+                        <p class="l-heading" data-testid="slackUserName">Jamil Amasa</p>
+                    </div>
+                </li>
+                <li>
+                    <!-- Current Day of the week -->
+                    <div id="dayOfTheWeek" class="listItem">
+                        <h3>Current Day Of The Week:</h3>
+                        <p class="dayOfWeek" data-testid="currentDayOfTheWeek"></p>
+                    </div>
+                </li>
+                <li>
+                    <!-- Current UTC Time -->
+                    <div id="currentUTCTime" class="listItem">
+                        <h3>Current UTC Time</h3>
+                        <p class="UTCTime" data-testid="currentUTCTime"></p>
+                    </div>
+                </li>
+                <li>
+                    <!-- Track -->
+                    <div class="listItem">
+                        <h3>Track: </h3>
+                        <p class="l-text" data-testid="myTrack">Frontend</p>
+                    </div>
+                </li>
+                <li>
+                    <!-- GitHub URL -->
+                    <div class="listItem">
+                        <h3>GitHub Link: </h3>
+                        <a href="https://github.com/Jamilamasa/hngstageone" target="_blank"
+                            data-testid=“githubURL”>Github
+                            Link</a>
+                    </div>
+                </li>
+
+
+            </ul>
+
+
+
+
+
         </div>
     </div>
+    <script src="app.js"></script>
 </body>
 
 </html>
