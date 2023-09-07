@@ -15,7 +15,7 @@ const getCurrentTimeAndDay = () => {
   ];
   const today = new Date();
   const dayOfWeek = daysOfWeek[today.getUTCDay()];
-  const currentTimeUTC = `${today.getUTCHours()}:${
+  const currentTimeUTC = `${today.getUTCHours()<10? "0" + (today.getUTCHours()+1):(today.getUTCHours()+1)}:${
     today.getUTCMinutes() < 10
       ? "0" + today.getUTCMinutes()
       : today.getUTCMinutes()
