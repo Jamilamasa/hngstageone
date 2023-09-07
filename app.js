@@ -2,7 +2,7 @@
 const dayOfTheWeek = document.querySelector(".dayOfWeek");
 const UTCTime = document.querySelector(".UTCTime");
 
-// Function to get current dat and time
+// Function to get current day and time
 const getCurrentTimeAndDay = () => {
   const daysOfWeek = [
     "Sunday",
@@ -31,18 +31,18 @@ const getCurrentTimeAndDay = () => {
   };
 };
 
-
-
 const showTimeAndDay = () => {
-  // Create textNode and append day of the week
-  dayOfTheWeek.appendChild(
-    document.createTextNode(getCurrentTimeAndDay().dayOfWeek)
-  );
-  // Create textNode and append UTC time
-  UTCTime.appendChild(
-    document.createTextNode(getCurrentTimeAndDay().currentTimeUTC)
-  );
+  // Set day of the week
+  dayOfTheWeek.textContent = getCurrentTimeAndDay().dayOfWeek;
+
+  // Set UTC time
+  UTCTime.textContent = getCurrentTimeAndDay().currentTimeUTC;
 };
 
 // Get Current Time and day
-document.addEventListener("DOMContentLoaded", showTimeAndDay);
+document.addEventListener("DOMContentLoaded", () => {
+  showTimeAndDay(); // Call it once when the page is loaded
+
+  // Update the time every second
+  setInterval(showTimeAndDay, 1000);
+});
